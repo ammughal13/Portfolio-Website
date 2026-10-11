@@ -1,0 +1,259 @@
+/* Basic Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Navigation Bar */
+header {
+    background-color: #111827;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+#navbar h2 {
+    color: #38bdf8;
+}
+
+.navLinks {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.navLinks a:hover {
+    color: #38bdf8;
+}
+
+
+/* Home Section */
+#home {
+    min-height: 80vh;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+#home h1 {
+    font-size: 48px;
+    color: #38bdf8;
+}
+
+#home h2 {
+    font-size: 28px;
+}
+
+#home p {
+    max-width: 650px;
+    color: #cbd5e1;
+}
+
+.mainBtn {
+    display: inline-block;
+    background-color: #38bdf8;
+    color: #0f172a;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.mainBtn:hover {
+    background-color: #0284c7;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* About Section */
+#about,
+#skills,
+#projects,
+#contact {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+#about p {
+    max-width: 750px;
+    margin: 20px auto 0;
+    color: #cbd5e1;
+}
+
+
+/* Skills Section */
+.skillsList {
+    max-width: 850px;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.skill {
+    background-color: #1e293b;
+    padding: 18px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+
+/* Projects Section */
+.projectContainer {
+    max-width: 1100px;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.projectCard {
+    background-color: #1e293b;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.projectCard:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.projectCard h3 {
+    color: #38bdf8;
+    margin-bottom: 12px;
+}
+
+.projectCard p {
+    color: #cbd5e1;
+    margin-bottom: 15px;
+}
+
+.projectCard a {
+    display: inline-block;
+    background-color: #38bdf8;
+    color: #0f172a;
+    padding: 8px 12px;
+    margin: 5px 5px 0 0;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.projectCard a:hover {
+    background-color: #0284c7;
+    color: white;
+}
+
+
+/* Contact Section */
+#contact p {
+    color: #cbd5e1;
+    margin: 15px auto;
+    max-width: 600px;
+}
+
+#contact > a {
+    display: inline-block;
+    background-color: #38bdf8;
+    color: #0f172a;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#contact > a:hover {
+    background-color: #0284c7;
+    color: white;
+}
+
+
+/* Footer */
+footer {
+    background-color: #111827;
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 600px) {
+
+    #navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .navLinks {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #home {
+        min-height: auto;
+        padding: 60px 15px;
+    }
+
+    #home h1 {
+        font-size: 36px;
+    }
+
+    #home h2 {
+        font-size: 23px;
+    }
+
+    #about,
+    #skills,
+    #projects,
+    #contact {
+        padding: 50px 15px;
+    }
+
+    .projectContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .projectCard {
+        width: 100%;
+    }
+
+}
